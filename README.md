@@ -3,14 +3,22 @@
 
 <p align="center">
 	<h1 align="center">Nine Web Service</h1>
-	<p align="center">
-        Nine internal post filtering service.
-  </p>
 </p>
 <p align="center">
+ <p>Made with: </p>
   <a href="https://github.com/nodejs/node"  alt="node js">
     <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="node js">
   </a>
+  <a href="https://github.com/facebook/react"  alt="react">
+    <img src="https://img.shields.io/badge/react-%2320232a.svg  style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="node js">
+  </a>
+  <a href="https://dashboard.heroku.com/"  alt="heroku">
+    <img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white" alt="node js">
+  </a>
+
+  
+
+  
 
 </p>
 
@@ -37,7 +45,23 @@ yarn dev
 
 ### Basic Overview
 
-Importing the json url or json format content to get the filtered data.
+Importing the json url or json format contents to get the filtered data.
+
+<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/overview.png">
+
+
+### Expected Response
+If the json url or json format conent is correct, the Output Result area will return the filtered response.
+
+<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/positive.png">
+
+
+### Error Handling
+If the json url or json format conent is wrong, the Output Result area will return the error response.
+
+<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/error.png">
+
+
 
 ```js
 import { httpPost } from "axios-io-ts"
