@@ -2,9 +2,9 @@
   "name": "nine-web-service",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next ./src",
+    "build": "next build ./src",
+    "start": "next start ./src",
     "lint": "next lint"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-export const useCheckUrl = (jsonUrl) => {
+export const checkUrl = (jsonUrl) => {
     switch (jsonUrl) {
         case null:
         case undefined:

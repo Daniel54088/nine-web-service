@@ -1,4 +1,4 @@
-import { useCheckUrl, isJson } from "./middleware";
+import { checkUrl, isJson } from "./middleware";
 import axios from "axios";
 import { filterPayload, isValidJSONString } from "../../util/apiTools";
 
@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   try {
     if (req.body.dataType === "url") {
       const jsonUrl = req.body.url;
-      const checkResult = await useCheckUrl(jsonUrl);
+      const checkResult = await checkUrl(jsonUrl);
 
       // Validate the url is correct
       if (checkResult.status !== 200) {
