@@ -47,7 +47,7 @@ export default async function handler(req, res) {
 
       return res.status(200).json(returnData);
       
-    } else {
+    } else { // json format
 
       if (isValidJSONString(req.body.jsonString)) {
 
