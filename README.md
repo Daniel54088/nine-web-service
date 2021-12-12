@@ -1,1 +1,119 @@
 # nine-web-service
+
+
+<p align="center">
+	<h1 align="center">Nine Web Service</h1>
+	<p align="center">
+        Nine internal post filtering service.
+  </p>
+</p>
+<p align="center">
+  <a href="https://github.com/nodejs/node"  alt="node js">
+    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="node js">
+  </a>
+
+</p>
+
+<!-- Used for the "back to top" links within the document -->
+<div id="contents"></div>
+
+
+## Getting started
+
+**YARN install**
+
+```sh
+yarn 
+```
+
+**Start local server**
+
+```sh
+yarn dev
+```
+
+
+## Features
+
+### Basic Overview
+
+Importing the json url or json format content to get the filtered data.
+
+```js
+import { httpPost } from "axios-io-ts"
+
+const promise = httpPost({
+    url: "/test",
+    data: {
+        foo: "bar",
+    },
+})
+```
+
+as part of the default export e.g.
+
+```ts
+import axios from "axios-io-ts"
+
+const promise = axios.get({
+    url: "/test",
+    data: {
+        foo: "bar",
+    },
+})
+```
+
+or, with the client factory e.g.
+
+```ts
+import { httpClient } from "axios-io-ts"
+
+const client = httpClient({ baseURL: "baseURL" }) // OR axios.create({ baseURL: "baseURL" })
+const promise = client.post({
+    url: "/test",
+    data: {
+        foo: "bar",
+    },
+})
+```
+
+<sub>[⇧ back to top](#contents)</sub>
+
+### Data validation
+
+Axios response data can be validated by providing an [io-ts](https://github.com/gcanti/io-ts) decoder to your request
+
+```ts
+import { httpGet } from "axios-io-ts"
+import * as t from "io-ts"
+
+const promise = httpGet({
+    url: "/test",
+    decoder: t.type({
+        foo: t.string,
+    }),
+}).then((response) => response.data.foo) // strongly typed foo
+```
+
+<sub>[⇧ back to top](#contents)</sub>
+
+### Error handling
+
+If data validation fails, a `DecodeError` is thrown. You can catch this with `onDecodeError()`
+
+```ts
+import { httpGet, onDecodeError } from "axios-io-ts"
+import * as t from "io-ts"
+
+const promise = httpGet({
+    url: "/test",
+    decoder: t.type({
+        foo: t.string,
+    }),
+})
+    .then((response) => response.data.foo)
+    .catch(onDecodeError((err) => handle(err)))
+    .catch((other) => null)
+```
+
+<sub>[⇧ back to top](#contents)</sub>

@@ -8,8 +8,6 @@ import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 function MyApp({ Component, pageProps }) {
-  console.log(Component)
-  console.log(pageProps)
   return (
     <Provider store={store}>
     <React.Fragment>
