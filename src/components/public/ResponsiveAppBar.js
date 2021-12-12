@@ -15,7 +15,6 @@ import Link from "next/link";
 const pages = [
   // Add new pages link here
   { label: "Home", url: "/" },
-  { label: "Page2", url: "/page-two" }
 ];
 const settings = ["Logout"];
 
