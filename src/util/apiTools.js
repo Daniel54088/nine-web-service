@@ -1,7 +1,6 @@
 export const filterPayload = dataPayload => {
     // return the ones with DRM enabled (drm: true) and at least one episode (episodeCount > 0).
     let filteredContent = [];
-    //console.log(dataPayload.payload)
     return filteredContent = dataPayload.payload
       .filter(item => item.drm === true)
       .filter(item => item.episodeCount > 0);
