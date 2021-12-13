@@ -85,7 +85,7 @@ export const filterPayload = dataPayload => {
 ### CI / CD
 When merge the latest code to github main branch, It will automatically deploy on the Heroku server.
 
-<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/deploy.png">
+<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/heroku.png">
 
 
 
@@ -94,6 +94,8 @@ When merge the latest code to github main branch, It will automatically deploy o
 
 ## Future plans
 
-1.   <a href="https://github.com/Daniel54088/nine-web-service/issues/4"  alt="react">Add Docker in the app</a> 
+1. <a href="https://github.com/Daniel54088/nine-web-service/issues/4"  alt="docker">Add Docker in the app</a> 
+2. <a href="https://github.com/Daniel54088/nine-web-service/issues/6"  alt="sentry">Add Sentry in the app</a>
+
 
 
