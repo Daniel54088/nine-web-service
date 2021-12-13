@@ -101,7 +101,7 @@ const ResponsiveAppBar = () => {
             {pages.map(page => (
               <MenuItem key={page.label} onClick={handleCloseNavMenu}>
                 {page.newPage ? (
-                  <div className={styles.list}><a href={page.url}  target="_blank">{page.label} </a></div>
+                  <div className={styles.list}><a href={page.url}  target="_blank" rel="noreferrer">{page.label} </a></div>
                 ) : (
                   <Link href={page.url}>
                     <div className={styles.list}>{page.label}</div>
