@@ -6,7 +6,6 @@
 </p>
 
 <p align="center">
- Made with:
   <a href="https://github.com/nodejs/node"  alt="node js">
     <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="node js">
   </a>
@@ -35,6 +34,10 @@ yarn
 ```sh
 yarn dev
 ```
+
+## Quick Demo
+
+  <a href="https://nine-web-service-1.herokuapp.com/"  alt="react">https://nine-web-service-1.herokuapp.com/</a>
 
 
 ## Features
@@ -75,4 +78,22 @@ export const filterPayload = dataPayload => {
 ```
 
 <sub>[⇧ back to top](#contents)</sub>
+
+
+## Deployment
+
+### CI / CD
+When merge the latest code to github main branch, It will automatically deploy on the Heroku server.
+
+<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/deploy.png">
+
+
+
+<sub>[⇧ back to top](#contents)</sub>
+
+
+## Future plans
+
+1.   <a href="https://github.com/Daniel54088/nine-web-service/issues/4"  alt="react">Add Docker in the app</a> 
+
 

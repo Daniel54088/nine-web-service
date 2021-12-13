@@ -15,6 +15,11 @@ import Link from "next/link";
 const pages = [
   // Add new pages link here
   { label: "Home", url: "/" },
+  {
+    label: "Github",
+    url: "https://github.com/Daniel54088/nine-web-service",
+    newPage: true
+  }
 ];
 const settings = ["Logout"];
 
@@ -93,19 +98,25 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          {pages.map(page => (
-                <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+            {pages.map(page => (
+              <MenuItem key={page.label} onClick={handleCloseNavMenu}>
+                {page.newPage ? (
+                  <div className={styles.list}><a href={page.url}  target="_blank">{page.label} </a></div>
+                ) : (
                   <Link href={page.url}>
                     <div className={styles.list}>{page.label}</div>
                   </Link>
-                </MenuItem>
-              ))}
+                )}
+              </MenuItem>
+            ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              </IconButton>
+              <IconButton
+                onClick={handleOpenUserMenu}
+                sx={{ p: 0 }}
+              ></IconButton>
             </Tooltip>
             <Menu
               sx={{ mt: "45px" }}
