@@ -1,5 +1,7 @@
 import { FETCH_POST_FROM_URL } from "../constants";
 
+
+
 export const fetchPostFromUrl = (url) => ({
   type: FETCH_POST_FROM_URL,
   apiEndpoint: "/api/post",

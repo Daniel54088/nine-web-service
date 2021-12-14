@@ -3,7 +3,9 @@ import axios from "axios";
 import { filterPayload, isValidJSONString } from "../../util/apiTools";
 
 export default async function handler(req, res) {
+
   try {
+
     if (req.body.dataType === "url") {
       const jsonUrl = req.body.url;
       const checkResult = await checkUrl(jsonUrl);
