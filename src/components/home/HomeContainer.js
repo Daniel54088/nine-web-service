@@ -33,13 +33,15 @@ const HomeContainer = () => {
             <input 
             placeholder="Please insert a json file url"
             className={styles.inputRow} 
-            onChange={(e)=> setUrl(e.target.value)
-            }></input>
+            onChange={(e)=> setUrl(e.target.value)}
+            data-testid="input"
+            ></input>
             <div className={styles.btnArea}>
             <Button 
             variant="contained" 
             onClick={() =>handleSend('url')}
             disabled={postFetching}
+            data-testid="button"
             >Send</Button>
             </div>
 
@@ -53,6 +55,7 @@ const HomeContainer = () => {
             placeholder="Please insert the json content"
             style={{ border: '1px solid #d8d8d8'}}
             onChange={(e)=> setJsonFormat(e.target.value)}
+            data-testid="input"
             >
             </textarea>
             <div className={styles.btnArea}>
@@ -60,6 +63,7 @@ const HomeContainer = () => {
               variant="contained" 
               onClick={() =>handleSend('json-format')}
               disabled={postFetching}
+              data-testid="button"
               >Send</Button>
             </div>
           </div>
@@ -70,7 +74,7 @@ const HomeContainer = () => {
       <h2>Output Result</h2>
       <div className={styles.contentCard}>
         <div className={styles.jsonArea}>
-          <pre className={styles.pre}>
+          <pre className={styles.pre} data-testid="output">
           { `${jsonReponse}` }
           </pre>
 

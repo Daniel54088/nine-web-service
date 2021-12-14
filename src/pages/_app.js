@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import store from '../store/store';
 import "../styles/globals.css";
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+
 
 function MyApp({ Component, pageProps }) {
   return (

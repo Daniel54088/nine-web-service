@@ -10,7 +10,7 @@ import {
 } from "../constants";
 
 import { toast } from "react-toastify";
-const toastId = "createAudience";
+let toastId = "createAudience";
 
 const post = (action$, state$) =>
   action$.pipe(
@@ -59,10 +59,9 @@ const post = (action$, state$) =>
           };
         }),
         catchError(error =>{
-
           toast.update(toastId, {
             id: toastId,
-            render: error.response.error,
+            render: error.response ? error.response.error : 'Error',
             autoClose: 4000,
             hideProgressBar: true,
             progress: undefined,

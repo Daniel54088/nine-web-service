@@ -82,6 +82,11 @@ export const filterPayload = dataPayload => {
 
 ## Deployment
 
+### Testing code (Jest)
+- Component UI testing, making sure the element render successfully. 
+- Test filtering function works as expected.
+
+
 ### CI / CD
 When merge the latest code to github main branch, It will automatically deploy on the Heroku server.
 
@@ -96,6 +101,6 @@ When merge the latest code to github main branch, It will automatically deploy o
 
 1. <a href="https://github.com/Daniel54088/nine-web-service/issues/4"  alt="docker">Add Docker in the app</a> 
 2. <a href="https://github.com/Daniel54088/nine-web-service/issues/6"  alt="sentry">Add Sentry in the app</a>
-
+3. Add redux testing code.
 
 
