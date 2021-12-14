@@ -87,8 +87,10 @@ export const filterPayload = dataPayload => {
 - Test filtering function works as expected.
 
 
-### CI / CD
-When merge the latest code to github main branch, It will automatically deploy on the Heroku server.
+### CI / CD  (Travis & Heroku)
+When merge the latest code to github main branch, It will automatically integration the code and deploy on the Heroku server 
+
+<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/travis.png">
 
 <img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/heroku.png">
 
