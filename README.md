@@ -17,8 +17,6 @@
   </a>
 </p>
 
-[![Build Status](https://app.travis-ci.com/Daniel54088/nine-web-service.svgbranch=main)](https://app.travis-ci.com/Daniel54088/nine-web-service)
-
 <!-- Used for the "back to top" links within the document -->
 <div id="contents"></div>
 
